@@ -1,0 +1,69 @@
+/* div{
+    border: 1px solid red;
+    margin: 2px;
+} */
+.main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.layout-button-inactive{
+    border: none;
+    border-radius: 12px;
+    background-color: #e0e0e0;
+    color: #757575;
+    padding: 1.2em 2.4em 1.2em 2.4em;
+    cursor: pointer;
+}
+.layout-button-active{
+    border: none;
+    border-radius: 12px;
+    background-color: #606060;
+    color: #c4c4c4;
+    padding: 1.2em 2.4em 1.2em 2.4em;
+    cursor: pointer;
+}
+.layout-1{
+    display: grid;
+    grid-template-columns: auto;
+    height: 600px; 
+    gap: 1.2em;
+}
+.layout-2{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 400px;
+    gap: 1.2em;
+}
+.layout-3{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
+    height: 500px;
+    gap: 1em;
+}
+#cards-container{
+    width: 50vw;
+}
+.card{
+    background-color: #da1d5d;
+    color: white;
+    text-align: center;
+    border-radius: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.layout-3>.card:first-child{
+    grid-column: 1/6;
+}
+.layout-3>.card:last-child{
+    grid-column: 1/6;
+}
+.layout-3>.card:nth-child(2),.layout-3>.card:nth-child(3),.layout-3>.card:nth-child(4){
+    grid-row: 2/5;
+}
+.layout-3>.card:nth-child(3){
+    grid-column: 2/5;
+}
